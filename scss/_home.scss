@@ -1,0 +1,55 @@
+// NOTE: Make adjustments in the  _CONFIG.SCSS page 
+
+.slide {
+  position: relative;
+  margin: auto;
+  display: block;
+  top: 50%;
+  @include transformer-y;
+  width: 80%;
+  color: rgb(144, 143, 143);
+  text-transform: uppercase;
+  font-size: $var-font-size;
+  font-weight: bold;
+
+  &_container {
+    height: $container-size + $distance-between-words +$margin-y;
+    overflow: hidden;
+    margin-top: $margin-y;
+
+    & > div > div {
+      margin-bottom: $distance-between-words + $margin-y;
+      display: inline-block;
+      padding: $padding 10px;
+      color: #fff;
+      line-height: 0;
+    }
+    & > div:first-child {
+      animation: show 4s linear infinite;
+      -webkit-animation: show 4s linear infinite;
+    }
+    &-1 div{
+      background: #8ae895;}
+    &-2 div {
+      background:#85E3FF;}
+    &-3 div {
+      background:#f8afcb;
+    }
+  }
+}
+  
+@include animation-positions($container-size + $distance-between-words + $margin-y);
+
+
+
+
+
+
+
+p {
+  position: relative;
+  top: 60vh;
+  font-size: 15px;
+  color: rgb(122, 122, 122);
+  letter-spacing: 1px;
+}

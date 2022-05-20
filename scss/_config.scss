@@ -1,0 +1,38 @@
+$container-size: 60px; // LEADING VALUE. CANT BE SMALLER THAN THE $-var-font-size
+$padding: $container-size * 0.5; // DO NOT CHANGE
+
+$distance-between-words: 0px; // SPACE BETWEEN EACH .SLIDE WORD 
+$margin-y: 5px;  // ADJUSTS SPACE BETWEEN .SLIDE TEXT & PARENT TEXT
+
+$var-font-size: 50px; // Must remain smaller than the $padding above. 
+
+
+@mixin animation-positions($pos1) { // AUTO ADJUSTS BASED ON THE $ VALUES ABOVE
+  @keyframes show {
+    0% {margin-top:$pos1 * -3;
+    }
+    5% {margin-top:$pos1 * -2; 
+    }
+    33% {margin-top:$pos1 * -2;
+    }
+    38% {margin-top:$pos1 * -1;
+    }
+    66% {margin-top:$pos1 * -1
+    }
+    71% {margin-top:$pos1 * 0;
+    }
+    99.99% {margin-top:$pos1 * 0;
+    }
+    100% {margin-top:$pos1 * -3;
+    }
+  }
+}
+
+@mixin transformer-y {
+  transform: translatey(-50%);
+  -webkit-transform: translatey(-50%);
+  -moz-transform: translatey(-50%);
+  -ms-transform: translatey(-50%);
+  -o-transform: translatey(-50%);
+}
+
